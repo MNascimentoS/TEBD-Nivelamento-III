@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TEBD Faculdade Mobile</string>
+    <string name="action_new">Nova</string>
+    <string name="action_update">Editar</string>
+    <string name="action_delete">Apagar</string>
+    <string name="action_settings">Settings</string>
+</resources>
