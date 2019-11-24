@@ -32,9 +32,11 @@ public class DisciplinaValue implements Serializable {
 
     @Override
     public String toString() {
-        return "DisciplinaValue{" +
-                "id=" + id +
-                ", disciplina='" + disciplina + '\'' +
-                '}';
+//        return "DisciplinaValue{" +
+//                "id=" + id +
+//                ", disciplina='" + disciplina + '\'' +
+//                '}';
+
+        return id + " - " + disciplina;
     }
 }
