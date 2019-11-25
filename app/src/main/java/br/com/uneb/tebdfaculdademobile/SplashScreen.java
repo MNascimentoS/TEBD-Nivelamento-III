@@ -34,11 +34,7 @@ public class SplashScreen extends AppCompatActivity {
         textView = (TextView) this.findViewById(R.id.textView);
         textView.setText("Aguarde Carregando.......");
 
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                new JSONParse().execute(); }
-//        }, SPLASH_TIME_OUT);
+        new JSONParse().execute();
     }
 
     public static JSONObject Json(){
