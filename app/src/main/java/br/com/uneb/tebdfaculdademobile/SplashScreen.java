@@ -34,8 +34,6 @@ public class SplashScreen extends AppCompatActivity {
         textView = (TextView) this.findViewById(R.id.textView);
         textView.setText("Aguarde Carregando.......");
 
-        new JSONParse().execute();
-
 //        new Handler().postDelayed(new Runnable() {
 //            @Override
 //            public void run() {
@@ -48,7 +46,7 @@ public class SplashScreen extends AppCompatActivity {
         String resp=null;
         try {
             // Create connection to send GCM Message request.
-            URL url1 = new URL("http://api.myjson.com/bins/oywoa");
+            URL url1 = new URL("https://android-exercise.herokuapp.com/");
             HttpURLConnection conn = (HttpURLConnection) url1.openConnection();
             conn.setRequestMethod("GET");
             conn.setDoOutput(true);
