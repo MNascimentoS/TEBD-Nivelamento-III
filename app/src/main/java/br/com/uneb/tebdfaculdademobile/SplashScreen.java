@@ -34,11 +34,13 @@ public class SplashScreen extends AppCompatActivity {
         textView = (TextView) this.findViewById(R.id.textView);
         textView.setText("Aguarde Carregando.......");
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                new JSONParse().execute(); }
-        }, SPLASH_TIME_OUT);
+        new JSONParse().execute();
+
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                new JSONParse().execute(); }
+//        }, SPLASH_TIME_OUT);
     }
 
     public static JSONObject Json(){
@@ -46,10 +48,9 @@ public class SplashScreen extends AppCompatActivity {
         String resp=null;
         try {
             // Create connection to send GCM Message request.
-            URL url1 = new URL("https://api.myjson.com/bins/oywoa");
+            URL url1 = new URL("http://api.myjson.com/bins/oywoa");
             HttpURLConnection conn = (HttpURLConnection) url1.openConnection();
-            conn.setRequestProperty("Content-Type", "application/json");
-            conn.setRequestMethod("POST");
+            conn.setRequestMethod("GET");
             conn.setDoOutput(true);
 
             // Read GCM response.
